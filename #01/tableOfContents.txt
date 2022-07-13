@@ -15,3 +15,5 @@ l50GGv = superObjectParameter in wTabl3()
 pl4ntz = superObjectParameter in gR03vb()
 
 gR03vb = comWrite()
+
+qranty = superArray
