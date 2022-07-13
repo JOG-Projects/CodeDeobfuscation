@@ -17,3 +17,5 @@ pl4ntz = superObjectParameter in gR03vb()
 gR03vb = comWrite()
 
 qranty = superArray
+
+H3br3w = xmlDOM
