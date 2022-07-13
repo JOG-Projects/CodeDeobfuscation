@@ -7,3 +7,11 @@ H3alinG = main() function
 tem = for loop enumerating variable
 
 f3mzy = main() function result
+
+wTabl3 = evalArray()
+
+l50GGv = superObjectParameter in wTabl3()
+
+pl4ntz = superObjectParameter in gR03vb()
+
+gR03vb = comWrite()

@@ -1,20 +1,20 @@
 function main(){
     var comObject;
-    this.wTabl3 = function(superObjectParameter){
+    this.evalArray = function(superObjectParameter){
         var qranty = Array(Array("var H3br3w", "WSH.CreateObject(\"microsoft.xmldom\").createElement(\"mko\")"), Array("H3br3w.dataType", "\"bin.base64\""), Array("H3br3w.text", "\"" + superObjectParameter.content.replace(/%>/g, "A") + "\""), Array("superObjectParameter.content", "Array(H3br3w)"), Array("comObject", "WSH.CreateObject(\"adodb.stream\")"));
         for(var i=0; i<qranty.length; i++){
             eval(qranty[i][0] + "=" + qranty[i][1]);
         }
     };
     
-    this.gR03vb = function(pl4ntz){
+    this.comWrite = function(superObjectParameter){
         comObject.Type = 1;
         comObject.Open();
-        comObject.Write(pl4ntz.content[0].nodeTypedValue);
+        comObject.Write(superObjectParameter.content[0].nodeTypedValue);
         comObject.Position = 0;
         comObject.Type = 2;
         comObject.CharSet = "us-ascii";
-        pl4ntz.content = Array(comObject.ReadText());
+        superObjectParameter.content = Array(comObject.ReadText());
     };
     }
     
@@ -26,6 +26,6 @@ function main(){
 
     //#endregion
     
-    mainResult.wTabl3(superObject);
-    mainResult.gR03vb(superObject);
+    mainResult.evalArray(superObject);
+    mainResult.comWrite(superObject);
     WSH.Echo(superObject.content[0].substr(0,900));
