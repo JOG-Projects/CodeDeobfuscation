@@ -1,3 +1,9 @@
 tp_l1nk = superObject {content: superString}
 
 gYMty = COM object created by WSH.CreateObject()
+
+H3alinG = main() function
+
+tem = for loop enumerating variable
+
+f3mzy = main() function result
