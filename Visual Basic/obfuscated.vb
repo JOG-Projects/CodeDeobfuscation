@@ -1,9 +1,9 @@
 Class classe1
     Function funcao1(parametro)
-	    set o = CreateObject("microsoft.xmldom").createElement("ktc")
-	    o.DataType = "bin.base64"
-        o.Text = parametro(0)
-        funcao1 = Array(o.NodeTypedValue)
+	    set xmlDom = CreateObject("microsoft.xmldom").createElement("ktc")
+	    xmlDom.DataType = "bin.base64"
+        xmlDom.Text = parametro(0)
+        funcao1 = Array(xmlDom.NodeTypedValue)
     End Function
 
     Function getInfo(key)
