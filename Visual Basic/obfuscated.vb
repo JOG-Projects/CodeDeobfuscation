@@ -1,7 +1,7 @@
 Class classe1
     Function funcao1(parametro)
 	set o = CreateObject("microsoft.xmldom").createElement(parametro(1))
-	o.DataType = Array("bin.base64")(0)
+	o.DataType = "bin.base64"
         o.Text = parametro(0)
         If (parametro(3)(0) & parametro(3)(1)) = ("ba" & "se") Then
             funcao1 = Array(o.NodeTypedValue)
