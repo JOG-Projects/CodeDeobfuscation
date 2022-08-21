@@ -3,7 +3,7 @@ Class classe1
 	    set xmlDom = CreateObject("microsoft.xmldom").createElement("ktc")
 	    xmlDom.DataType = "bin.base64"
         xmlDom.Text = parametro(0)
-        funcao1 = Array(xmlDom.NodeTypedValue)
+        funcao1 = xmlDom.NodeTypedValue
     End Function
 
     Function getInfo(key)
@@ -26,7 +26,7 @@ variavel4 = objClasse1.funcao1(variavel1)
 adodb = CreateObject("adodb.stream")
 adodb.Type = 1
 adodb.Open
-adodb.Write variavel4(0)
+adodb.Write variavel4
 adodb.Position = 0
 adodb.Type = 2
 adodb.CharSet = "us-ascii"
