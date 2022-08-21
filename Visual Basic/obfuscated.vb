@@ -3,9 +3,7 @@ Class classe1
 	    set o = CreateObject("microsoft.xmldom").createElement(parametro(1))
 	    o.DataType = "bin.base64"
         o.Text = parametro(0)
-        If ("ba" & "se") = ("ba" & "se") Then
-            funcao1 = Array(o.NodeTypedValue)
-        End If
+        funcao1 = Array(o.NodeTypedValue)
     End Function
 
     Function getInfo(key)
