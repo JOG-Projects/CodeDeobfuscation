@@ -1,8 +1,6 @@
 Class classe1
     Function getInfo(key)
-        temp = getInfo("labito")
-        temp(0) = key.ReadText
-        getInfo = temp
+        getInfo = Array(key.ReadText)
     End Function
 End Class
 
