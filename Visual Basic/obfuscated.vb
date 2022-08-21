@@ -3,7 +3,7 @@ Class classe1
 	    set o = CreateObject("microsoft.xmldom").createElement(parametro(1))
 	    o.DataType = "bin.base64"
         o.Text = parametro(0)
-        If (Array("ba", "se", "64")(0) & Array("ba", "se", "64")(1)) = ("ba" & "se") Then
+        If ("ba" & "se") = ("ba" & "se") Then
             funcao1 = Array(o.NodeTypedValue)
         End If
     End Function
