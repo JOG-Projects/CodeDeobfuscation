@@ -22,11 +22,10 @@ variavel1 = objClasse1.getInfo("labito")
 variavel2 = Replace(variavel1(0), variavel1(1), variavel1(2))
 variavel1 = Array(variavel2, 0, 0, 0)
 
-variavel4 = objClasse1.funcao1(variavel1)
 adodb = CreateObject("adodb.stream")
 adodb.Type = 1
 adodb.Open
-adodb.Write variavel4
+adodb.Write objClasse1.funcao1(variavel1)
 adodb.Position = 0
 adodb.Type = 2
 adodb.CharSet = "us-ascii"
