@@ -20,7 +20,7 @@ End Class
 Set objClasse1 = New classe1
 variavel1 = objClasse1.getInfo("labito")
 variavel2 = Replace(variavel1(0), variavel1(1), variavel1(2))
-variavel1 = Array(variavel2, 0, 0, 0)
+variavel1 = variavel2
 
 adodb = CreateObject("adodb.stream")
 adodb.Type = 1
