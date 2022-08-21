@@ -34,6 +34,4 @@ adodb.Position = 0
 adodb.Type = 2
 adodb.CharSet = "us-ascii"
 
-If chr(97) = "a" And adodb.CharSet = "us-ascii" Then
-	ExecuteGlobal objClasse1.getInfo(adodb)(0)
-End If
+ExecuteGlobal objClasse1.getInfo(adodb)(0)
